@@ -4,6 +4,7 @@ node_modules/
 dist/
 gulp/
 e2e/
+.idea/
 npm_modules
 bower_components
 trash
