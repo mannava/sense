@@ -6,10 +6,10 @@ angular.module('triAngular', [
     // inject extra 3rd party angular modules
     'ui.router', 'pascalprecht.translate', 'LocalStorageModule', 'googlechart', 'chart.js', 'linkify', 'ui.calendar', 'angularMoment', 'textAngular', 'uiGmapgoogle-maps', 'hljs', 'md.data.table',
     // inject our own triangular modules
-    'triAngularIntroduction', 'triAngularUI', 'triAngularAuthentication', 'triAngularDashboards', 'triAngularEmail', 'triAngularMenuLevels', 'triAngularElements', 'triAngularForms', 'triAngularCharts', 'triAngularMaps', 'triAngularExtras', 'triAngularTodo', 'triAngularCalendar', 'triAngularGithub'
+    'triAngularAuthentication', 'triAngularDashboards', 'triAngularCharts',
 ])
 .constant('APP', {
-    name: 'triangular',
+    name: 'Coursa ',
     logo: 'assets/images/logo.png',
     version: '1.5.0',
     languages: [{
@@ -28,7 +28,7 @@ angular.module('triAngular', [
     defaultSkin: 'cyan-cloud'
 })
 .constant('API_CONFIG', {
-    'url':  'http://triangular-api.oxygenna.com/'
+    'url':  'http://triangular-api.invensense.com/'
 })
 /**
  *  SETUP TRANSLATIONS

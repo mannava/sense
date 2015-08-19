@@ -1,12 +1,12 @@
 {
     "MENU": {
         "DASHBOARDS": {
-            "DASHBOARDS": "Dashboards",
-            "GENERAL": "General",
-            "ANALYTICS": "Analytics",
-            "SERVER": "Server",
-            "WIDGETS": "Widgets",
-            "SOCIAL": "Social"
+            "DASHBOARDS": "Shopper",
+            "GENERAL": "Track",
+            "ANALYTICS": "Conversions",
+            "SERVER": "Dwells",
+            "WIDGETS": "Durations",
+            "SOCIAL": "Coverage/Heatmaps"
         }
     },
     "DASHBOARDS": {

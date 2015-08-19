@@ -4,6 +4,8 @@ node_modules/
 dist/
 gulp/
 e2e/
+idea/
+.idea
 .idea/
 npm_modules
 bower_components

@@ -1,0 +1,282 @@
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="http://code.highcharts.com/stock/highstock.js"></script>
+<script src="http://code.highcharts.com/stock/modules/exporting.js"></script>
+
+
+<div id="container" style="height: 400px; min-width: 310px"></div>
+
+
+<script>
+    var data = {
+        "sys":
+        {
+            "country":"GB",
+            "sunrise":1381107633,
+            "sunset":1381149604
+        },
+        "weather":[
+            {
+                "id":711,
+                "main":"Smoke",
+                "description":"smoke",
+                "icon":"50n"
+            }
+        ],
+        "main":
+        {
+            "temp":304.15,
+            "pressure":1009,
+        },
+        "sys":
+        {
+            "country":"GB",
+            "sunrise":1381107633,
+            "sunset":1381149604
+        },
+        "weather":[
+            {
+                "id":711,
+                "main":"Smoke",
+                "description":"smoke",
+                "icon":"50n"
+            }
+        ],
+        "main":
+        {
+            "temp":304.15,
+            "pressure":1009,
+        },
+        "sys":
+        {
+            "country":"GB",
+            "sunrise":1381107633,
+            "sunset":1381149604
+        },
+        "weather":[
+            {
+                "id":711,
+                "main":"Smoke",
+                "description":"smoke",
+                "icon":"50n"
+            }
+        ],
+        "main":
+        {
+            "temp":304.15,
+            "pressure":1009,
+        },
+        "sys":
+        {
+            "country":"GB",
+            "sunrise":1381107633,
+            "sunset":1381149604
+        },
+        "weather":[
+            {
+                "id":711,
+                "main":"Smoke",
+                "description":"smoke",
+                "icon":"50n"
+            }
+        ],
+        "main":
+        {
+            "temp":304.15,
+            "pressure":1009,
+        },
+        "sys":
+        {
+            "country":"GB",
+            "sunrise":1381107633,
+            "sunset":1381149604
+        },
+        "weather":[
+            {
+                "id":711,
+                "main":"Smoke",
+                "description":"smoke",
+                "icon":"50n"
+            }
+        ],
+        "main":
+        {
+            "temp":304.15,
+            "pressure":1009,
+        },
+        "sys":
+        {
+            "country":"GB",
+            "sunrise":1381107633,
+            "sunset":1381149604
+        },
+        "weather":[
+            {
+                "id":711,
+                "main":"Smoke",
+                "description":"smoke",
+                "icon":"50n"
+            }
+        ],
+        "main":
+        {
+            "temp":304.15,
+            "pressure":1009,
+        },
+        "sys":
+        {
+            "country":"GB",
+            "sunrise":1381107633,
+            "sunset":1381149604
+        },
+        "weather":[
+            {
+                "id":711,
+                "main":"Smoke",
+                "description":"smoke",
+                "icon":"50n"
+            }
+        ],
+        "main":
+        {
+            "temp":304.15,
+            "pressure":1009,
+        },
+        "sys":
+        {
+            "country":"GB",
+            "sunrise":1381107633,
+            "sunset":1381149604
+        },
+        "weather":[
+            {
+                "id":711,
+                "main":"Smoke",
+                "description":"smoke",
+                "icon":"50n"
+            }
+        ],
+        "main":
+        {
+            "temp":304.15,
+            "pressure":1009,
+        },
+        "sys":
+        {
+            "country":"GB",
+            "sunrise":1381107633,
+            "sunset":1381149604
+        },
+        "weather":[
+            {
+                "id":711,
+                "main":"Smoke",
+                "description":"smoke",
+                "icon":"50n"
+            }
+        ],
+        "main":
+        {
+            "temp":304.15,
+            "pressure":1009,
+        },
+        "sys":
+        {
+            "country":"GB",
+            "sunrise":1381107633,
+            "sunset":1381149604
+        },
+        "weather":[
+            {
+                "id":711,
+                "main":"Smoke",
+                "description":"smoke",
+                "icon":"50n"
+            }
+        ],
+        "main":
+        {
+            "temp":304.15,
+            "pressure":1009,
+        },
+
+    }
+    $(function () {
+
+        $.getJSON('http://www.highcharts.com/samples/data/jsonp.php?filename=large-dataset.json&callback=?', function (data) {
+
+            // Create a timer
+            var start = +new Date();
+
+            // Create the chart
+            $('#container').highcharts('StockChart', {
+                chart: {
+                    events: {
+                        load: function () {
+                            if (!window.isComparing) {
+                                this.setTitle(null, {
+                                    text: 'Built chart in ' + (new Date() - start) + 'ms'
+                                });
+                            }
+                        }
+                    },
+                    zoomType: 'x'
+                },
+
+                rangeSelector: {
+
+                    buttons: [{
+                        type: 'day',
+                        count: 3,
+                        text: '3d'
+                    }, {
+                        type: 'week',
+                        count: 1,
+                        text: '1w'
+                    }, {
+                        type: 'month',
+                        count: 1,
+                        text: '1m'
+                    }, {
+                        type: 'month',
+                        count: 6,
+                        text: '6m'
+                    }, {
+                        type: 'year',
+                        count: 1,
+                        text: '1y'
+                    }, {
+                        type: 'all',
+                        text: 'All'
+                    }],
+                    selected: 3
+                },
+
+                yAxis: {
+                    title: {
+                        text: 'Temperature (°C)'
+                    }
+                },
+
+                title: {
+                    text: 'Hourly temperatures in Fremont, 2009-2015'
+                },
+
+                subtitle: {
+                    text: 'Built chart in ...' // dummy text to reserve space for dynamic subtitle
+                },
+
+                series: [{
+                    name: 'Temperature',
+                    data: data.data,
+                    pointStart: data.pointStart,
+                    pointInterval: data.pointInterval,
+                    tooltip: {
+                        valueDecimals: 1,
+                        valueSuffix: '°C'
+                    }
+                }]
+
+            });
+        });
+    });
+</script>

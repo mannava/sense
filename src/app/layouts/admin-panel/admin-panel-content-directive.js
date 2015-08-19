@@ -27,7 +27,8 @@ angular.module('triAngular')
             });
 
             $scope.$on('$viewContentLoaded', function() {
-                var contentView = $element.find('#admin-panel-content-view');
+                //commented footer here...
+               /* var contentView = $element.find('#admin-panel-content-view');
 
                 // add footer to the content view
                 $templateRequest('components/footer/footer.tmpl.html')
@@ -38,7 +39,7 @@ angular.module('triAngular')
                     contentView.append(content);
                 }, function() {
                     console.error('Could not load footer tempalate');
-                });
+                });*/
             });
         }
     };

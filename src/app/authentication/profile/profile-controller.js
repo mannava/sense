@@ -14,15 +14,15 @@ angular.module('triAngularAuthentication')
 .controller('ProfileController', function ($scope, $state) {
     // create blank user variable for login form
     $scope.user = {
-        name: 'Christos',
-        email: 'info@oxygenna.com',
+        name: 'Bhaskar',
+        email: 'bmannava@invensense.com',
         location: 'Sitia, Crete, Greece',
-        website: 'http://www.oxygenna.com',
+        website: 'http://www.invensense.com',
         twitter: 'oxygenna',
         bio: 'We are a small creative web design agency \n who are passionate with our pixels.',
         current: '',
         password: '',
-        confirm: ''        
+        confirm: ''
     };
 
     // create some dummy user settings
@@ -56,7 +56,7 @@ angular.module('triAngularAuthentication')
             icon: 'icon-backup',
             enabled: true
         }]
-    }];    
+    }];
 
     // controller to handle login check
     $scope.updateSettingsClick = function() {

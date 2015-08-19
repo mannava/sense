@@ -1,7 +1,7 @@
 {
     "MENU": {
         "AUTH": {
-            "AUTH": "Authentication",
+            "AUTH": "Store",
             "LOGIN": "Login",
             "SIGN_UP": "Sign Up",
             "FORGOT": "Forgot Password",

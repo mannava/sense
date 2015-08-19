@@ -25,7 +25,7 @@ angular.module('triAngularDashboards')
                 name: 'Morris Onions',
                 image: 'assets/images/avatars/avatar-2.png'
             },{
-                name: 'Newton Welch',
+                name: 'Bhaskar Mannava',
                 image: 'assets/images/avatars/avatar-5.png',
             },{
                 name: 'Kelly Koelpin',
